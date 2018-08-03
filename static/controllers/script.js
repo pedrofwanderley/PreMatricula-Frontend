@@ -25,10 +25,10 @@ myApp.controller('myController', ['$scope', '$http', function($scope, $http, Sco
                     
                 }
                 if (bool) {
-                    window.location.replace("..templates/aluno.html");
+                    window.location.replace("templates/aluno.html");
                 }
                 else{
-                    window.location.replace("..templates/firstaccess.html");
+                    window.location.replace("templates/firstaccess.html");
                 }
             });
     };
@@ -50,7 +50,7 @@ myApp.controller('myController', ['$scope', '$http', function($scope, $http, Sco
                             $scope.gmail.username = resp.displayName;
                             $scope.gmail.email = resp.emails[0].value;
                             if (resp.emails[0].value === "projsw@ccc.ufcg.edu.br") {
-                                window.location.replace("..templates/coordenador.html");
+                                window.location.replace("templates/coordenador.html");
                             }else{
                                 $scope.verifyFirstAcess(resp.emails[0].value);
                             }
