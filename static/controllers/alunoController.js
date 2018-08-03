@@ -63,6 +63,7 @@ myApp.controller('alunoController', ['$scope', '$http', function($scope, $http, 
                 disciplinas[i] = checks[i].value;
            }
        }
+       alert(disciplinas);
        return (disciplinas);
 
 
