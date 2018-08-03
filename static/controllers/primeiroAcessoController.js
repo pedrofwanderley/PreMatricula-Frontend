@@ -21,7 +21,7 @@ myApp.controller('accessController', ['$scope', '$http', function($scope, $http)
         })
         .then(function(response) {
                 window.alert('Cadastro Realizado');
-                window.location.assign('http://prematricula2018.surge.sh/login');
+                window.location.href('http://prematricula2018.surge.sh/login');
         }, 
         function(response) { 
                 window.alert('Deu ruim');
