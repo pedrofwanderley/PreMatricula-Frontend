@@ -21,7 +21,7 @@ myApp.controller('accessController', ['$scope', '$http', function($scope, $http)
         })
         .then(function(response) {
                 window.alert('Cadastro Realizado');
-                window.location.assing('templates/login.html');
+                window.location.href('templates/login.html');
         }, 
         function(response) { 
                 window.alert('Deu ruim');
