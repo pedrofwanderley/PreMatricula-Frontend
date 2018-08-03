@@ -25,10 +25,10 @@ myApp.controller('myController', ['$scope', '$http', function($scope, $http, Sco
                     
                 }
                 if (bool) {
-                    window.location.href("http://prematricula2018.surge.sh/templates/aluno");
+                    window.location.replace("http://prematricula2018.surge.sh/templates/aluno");
                 }
                 else{
-                    window.location.href("http://prematricula2018.surge.sh/templates/firstaccess");
+                    window.location.replace("http://prematricula2018.surge.sh/templates/firstaccess");
                 }
             });
     };
@@ -50,7 +50,7 @@ myApp.controller('myController', ['$scope', '$http', function($scope, $http, Sco
                             $scope.gmail.username = resp.displayName;
                             $scope.gmail.email = resp.emails[0].value;
                             if (resp.emails[0].value === "projsw@ccc.ufcg.edu.br") {
-                                window.location.href("http://prematricula2018.surge.sh/templates/coordenador");
+                                window.location.replace("http://prematricula2018.surge.sh/templates/coordenador");
                             }else{
                                 $scope.verifyFirstAcess(resp.emails[0].value);
                             }
