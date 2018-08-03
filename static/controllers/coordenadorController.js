@@ -2,6 +2,7 @@ var myApp = angular.module("myApp", []);
 
 myApp.controller('cooController', ['$scope', '$http', function($scope, $http) {
     
+        $scope.disciplinasSolicitadas = [];
         $scope.alunos = [];
 
       $scope.cadastrar = function(obj){
@@ -36,6 +37,20 @@ myApp.controller('cooController', ['$scope', '$http', function($scope, $http) {
         });
       
       }
+
+      $scope.getDisciplinasRequisitadas = function(){
+        $http.get('https://prematricula2018.herokuapp.com/prematricula/api')
+        .then(function(response){
+         for (let index = 0; index < response.data.length; index++) {
+               const element = response.data[index];
+                  $scope.disciplinasSolicitadas[index] = element.cadeira + " " + element.vagasSolicitadas;
+                        
+                        
+         };
+                window.alert($scope.disciplinasSolicitadas);
+        });
+      }
+   
 
     
      
