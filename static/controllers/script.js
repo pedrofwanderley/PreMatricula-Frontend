@@ -49,7 +49,7 @@ myApp.controller('myController', ['$scope', '$http', function($scope, $http, Sco
                         $scope.$apply(function() {
                             $scope.gmail.username = resp.displayName;
                             $scope.gmail.email = resp.emails[0].value;
-                            if (resp.emails[0].value === "pwanderley10@gmail.com") {
+                            if (resp.emails[0].value === "projsw@ccc.ufcg.edu.br") {
                                 window.location.assign("coordenador.html");
                             }else{
                                 $scope.verifyFirstAcess(resp.emails[0].value);
